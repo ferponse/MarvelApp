@@ -1,0 +1,25 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "MarvelApp"
+include ':app'
+include ':features:marvel:marvel-ui'
+include ':features:marvel:marvel-domain'
+include ':features:marvel:marvel-data'
+include ':util'
+include ':common-ui'
+include ':common-domain'
+include ':common-data'
+include ':features'
+include ':features:marvel'
