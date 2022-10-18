@@ -10,7 +10,7 @@ import dagger.android.support.AndroidSupportInjectionModule
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [AndroidSupportInjectionModule::class, ViewModelFactoryModule::class, NetworkModule::class])
+@Component(modules = [AndroidSupportInjectionModule::class, ViewModelFactoryModule::class, RetrofitModule::class, DataModules::class])
 interface ApplicationComponent: AndroidInjector<MarvelApplication> {
 
     fun plusMarvelComponentBuilder(): MarvelComponent.Builder

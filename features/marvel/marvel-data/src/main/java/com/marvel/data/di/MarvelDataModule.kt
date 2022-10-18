@@ -1,29 +1,19 @@
-package com.example.marvelapp.di
+package com.marvel.data.di
 
 import com.marvel.data.network.MarvelApiClient
 import com.marvel.data.network.MarvelRemoteDataSource
 import com.marvel.data.network.ServicesUrlProvider
 import com.marvel.data.network.ServicesUrlProviderImpl
 import com.marvel.data.persistence.MarvelPersistence
-import com.marvel.domain.repository.MarvelRepository
 import com.marvel.data.repository.MarvelRepositoryImpl
+import com.marvel.domain.repository.MarvelRepository
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
 @Module
-object NetworkModule {
-
-    @Singleton
-    @Provides
-    fun providesRetrofit(): Retrofit {
-        return Retrofit.Builder()
-            .baseUrl("https://gateway.marvel.com/v1/public/characters/1011334/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-    }
+object MarvelDataModule {
 
     @Singleton
     @Provides
